@@ -34,3 +34,129 @@
 [debug] [2025-10-25T09:39:32.628Z] > authorizing via signed-in user (wjlee611@gmail.com)
 [debug] [2025-10-25T09:39:32.628Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2025-10-25T09:39:32.628Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:00:50.171Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:00:50.171Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:00:50.172Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:00:50.172Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:00:50.173Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:50.173Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:50.173Z] > refreshing access token with scopes: []
+[debug] [2025-10-25T10:00:50.174Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-25T10:00:50.174Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:50.438Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-10-25T10:00:50.438Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:50.438Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-10-25T10:00:50.438Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/vibe-water-tracker-2025
+[debug] [2025-10-25T10:00:51.539Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com 401
+[debug] [2025-10-25T10:00:51.539Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-10-25T10:00:51.539Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2025-10-25T10:00:51.539Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:51.539Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:51.539Z] > refreshing access token with scopes: []
+[debug] [2025-10-25T10:00:51.540Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-25T10:00:51.540Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:51.640Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-10-25T10:00:51.640Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:51.641Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on vibe-water-tracker-2025. Calls to it will fail if it is not enabled
+[debug] [2025-10-25T10:00:51.641Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:51.641Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:51.641Z] > refreshing access token with scopes: []
+[debug] [2025-10-25T10:00:51.641Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-25T10:00:51.641Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:51.742Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-10-25T10:00:51.742Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:51.743Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/vibe-water-tracker-2025 [none]
+[debug] [2025-10-25T10:00:52.073Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/vibe-water-tracker-2025 401
+[debug] [2025-10-25T10:00:52.073Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/vibe-water-tracker-2025 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.GetProject","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2025-10-25T10:00:52.073Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2025-10-25T10:00:52.073Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:52.073Z] Checked if tokens are valid: false, expires at: 1715183451458
+[debug] [2025-10-25T10:00:52.073Z] > refreshing access token with scopes: []
+[debug] [2025-10-25T10:00:52.073Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-25T10:00:52.073Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:00:52.182Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-10-25T10:00:52.182Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-25T10:02:26.576Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:02:26.577Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:02:26.578Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:02:26.578Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:02:26.579Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2025-10-25T10:02:26.579Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"14cab039-4e1e-48c7-b0db-ce63b0677960"}
+[debug] [2025-10-25T10:02:27.258Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2025-10-25T10:02:27.258Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"EFZnByKdnyIcAZqLVAblmjEEQzfptdYC3DspFWVruIU"}
+[debug] [2025-10-25T10:04:00.476Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:04:00.476Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:04:00.478Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:04:00.478Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:04:00.478Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2025-10-25T10:04:00.478Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2025-10-25T10:04:00.741Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 200
+[debug] [2025-10-25T10:04:00.741Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2025-10-25T10:04:08.245Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:04:08.245Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:04:08.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:04:08.246Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:04:08.246Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:08.246Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-10-25T10:04:08.246Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/vibe-water-tracker-2025
+[debug] [2025-10-25T10:04:09.352Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com 401
+[debug] [2025-10-25T10:04:09.352Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/vibe-water-tracker-2025/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-10-25T10:04:09.352Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2025-10-25T10:04:09.352Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:09.352Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:09.352Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on vibe-water-tracker-2025. Calls to it will fail if it is not enabled
+[debug] [2025-10-25T10:04:09.352Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:09.352Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/vibe-water-tracker-2025 [none]
+[debug] [2025-10-25T10:04:09.894Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/vibe-water-tracker-2025 403
+[debug] [2025-10-25T10:04:09.895Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/vibe-water-tracker-2025 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-10-25T10:04:09.897Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:09.897Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-10-25T10:04:09.897Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"vibe-water-tracker-2025","name":"Vibe Water Tracker"}
+[debug] [2025-10-25T10:04:10.275Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-10-25T10:04:10.275Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.5550147723893917871"}
+[debug] [2025-10-25T10:04:10.275Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:10.276Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 [none]
+[debug] [2025-10-25T10:04:11.196Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 200
+[debug] [2025-10-25T10:04:11.196Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 {"name":"operations/create_project.global.5550147723893917871"}
+[debug] [2025-10-25T10:04:11.698Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-10-25T10:04:11.699Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:11.700Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 [none]
+[debug] [2025-10-25T10:04:12.044Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 200
+[debug] [2025-10-25T10:04:12.044Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 {"name":"operations/create_project.global.5550147723893917871"}
+[debug] [2025-10-25T10:04:13.045Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-10-25T10:04:13.046Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:13.046Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 [none]
+[debug] [2025-10-25T10:04:13.279Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 200
+[debug] [2025-10-25T10:04:13.279Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5550147723893917871 {"name":"operations/create_project.global.5550147723893917871","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"872323382862","projectId":"vibe-water-tracker-2025","lifecycleState":"ACTIVE","name":"Vibe Water Tracker","createTime":"2025-10-25T10:04:11.391614Z"}}
+[debug] [2025-10-25T10:04:13.279Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:13.279Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/vibe-water-tracker-2025:addFirebase [none]
+[debug] [2025-10-25T10:04:17.015Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/vibe-water-tracker-2025:addFirebase 200
+[debug] [2025-10-25T10:04:17.015Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/vibe-water-tracker-2025:addFirebase {"name":"operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm"}
+[debug] [2025-10-25T10:04:17.015Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:17.016Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm [none]
+[debug] [2025-10-25T10:04:23.543Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm 200
+[debug] [2025-10-25T10:04:23.544Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm {"name":"operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm"}
+[debug] [2025-10-25T10:04:24.045Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-10-25T10:04:24.047Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:24.047Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm [none]
+[debug] [2025-10-25T10:04:25.125Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm 200
+[debug] [2025-10-25T10:04:25.125Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm {"name":"operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm"}
+[debug] [2025-10-25T10:04:26.127Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-10-25T10:04:26.127Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:26.127Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm [none]
+[debug] [2025-10-25T10:04:27.240Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm 200
+[debug] [2025-10-25T10:04:27.240Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm {"name":"operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm"}
+[debug] [2025-10-25T10:04:29.241Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-10-25T10:04:29.241Z] Checked if tokens are valid: true, expires at: 1761390239741
+[debug] [2025-10-25T10:04:29.241Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm [none]
+[debug] [2025-10-25T10:04:30.144Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm 200
+[debug] [2025-10-25T10:04:30.144Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm {"name":"operations/workflows/MmY5Nzc1YWEtMjdhNC00ZWVjLWJkYWUtNzY2YjI0MTE4Y2Zm","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"vibe-water-tracker-2025","projectNumber":"872323382862","displayName":"Vibe Water Tracker","name":"projects/vibe-water-tracker-2025","resources":{"hostingSite":"vibe-water-tracker-2025"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: vibe-water-tracker-2025
+[info]    - Project Name: Vibe Water Tracker
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/vibe-water-tracker-2025/overview

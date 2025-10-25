@@ -30,10 +30,13 @@
 ## 3. 프로젝트 구조
 
 - **루트 디렉토리:** `/Users/wjlee/Desktop/vibe_hack_2025`
+- **Flutter 프로젝트:** `vibe_water_tracker` (하위 디렉토리)
 - **주요 디렉토리 및 파일:**
+  - `PLAN.md`: 전체 개발 계획
+  - `TASKs.md`: 구체적인 작업 목록
   - `PRD.md`: 제품 요구사항 명세서
   - `firebase-debug.log`: Firebase 디버그 로그 (현재 존재)
-  - **레이어:**
+  - **레이어 (vibe_water_tracker/lib/src 내부):**
     - `bloc`: 비즈니스 로직 (상태 관리)
     - `repository`: 도메인 (데이터 처리 및 종속성 주입)
   - (추가될 예정)
