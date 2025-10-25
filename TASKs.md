@@ -19,10 +19,10 @@
 
 ### Phase 2: 사용자 인증 기능
 
-- [ ] `data/repositories/auth_repository.dart` 구현 (Google 로그인/로그아웃)
-- [ ] `features/auth/cubit/auth_cubit.dart` 구현 (인증 상태 관리)
-- [ ] `features/auth/views/splash_screen.dart` UI 및 라우팅 로직 구현
-- [ ] `features/auth/views/login_screen.dart` UI 및 Google 로그인 연동
+- [x] `data/repositories/auth_repository.dart` 구현 (Google 로그인/로그아웃)
+- [x] `features/auth/cubit/auth_cubit.dart` 구현 (인증 상태 관리)
+- [x] `features/auth/views/splash_screen.dart` UI 및 라우팅 로직 구현
+- [x] `features/auth/views/login_screen.dart` UI 및 Google 로그인 연동
 
 ### Phase 3: 물 마시기 핵심 기능
 

@@ -12,7 +12,20 @@
           "package_name": "com.example.vibe_water_tracker"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "872323382862-2pf2afnb07lipgkgj9c429hqdv9ftmdf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vibe_water_tracker",
+            "certificate_hash": "e09182fb345294f2ce55cf21969f9eaca8a83d89"
+          }
+        },
+        {
+          "client_id": "872323382862-5gr5kfie1snphofiutt5fm5gqfaa7t00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCA8vbVER8yC9p8db7oELim0acr1-b3jP4"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872323382862-5gr5kfie1snphofiutt5fm5gqfaa7t00.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "872323382862-rj013k34k6u3v1f54tdss32f8ua5avc4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vibeWaterTracker"
+              }
+            }
+          ]
         }
       }
     }
