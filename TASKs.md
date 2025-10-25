@@ -13,7 +13,7 @@
   - `flutter_bloc`
   - `go_router`
 - [x] **1-3. Firebase 프로젝트 설정:** Firebase 콘솔에서 신규 프로젝트 생성
-- [ ] **1-4. Flutter 앱에 Firebase 연동:** `flutterfire configure` 명령어를 사용하여 iOS, Android 앱에 Firebase 설정 파일 추가
+- [x] **1-4. Flutter 앱에 Firebase 연동:** `flutterfire configure` 명령어를 사용하여 iOS, Android 앱에 Firebase 설정 파일 추가
 - [ ] **1-5. 기본 디렉토리 구조 생성:** `lib/src` 내부에 `core`, `data`, `domain`, `presentation` 디렉토리 생성
 - [ ] **1-6. 기본 라우터 설정:** `go_router`를 사용하여 스플래시, 로그인, 홈 화면에 대한 기본 라우팅 경로 설정
 - [ ] **1-7. Material 3 기반 앱 테마 설정:** `main.dart` 파일에 `ThemeData`를 사용하여 기본 컬러 스킴 및 텍스트 스타일 정의
