@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vibe_water_tracker/src/data/repositories/intake_repository.dart';
 
-class IntakeCubit extends Cubit<int> {
+class IntakeCubit extends Cubit<double> {
   final IntakeRepository _intakeRepository;
 
-  IntakeCubit(this._intakeRepository) : super(0);
+  IntakeCubit(this._intakeRepository) : super(0.0);
 
   Future<void> loadInitialIntake() async {
     try {
@@ -15,7 +15,7 @@ class IntakeCubit extends Cubit<int> {
     }
   }
 
-  Future<void> updateIntake(int changeAmount) async {
+  Future<void> updateIntake(double changeAmount) async {
     final currentIntake = state;
     final newTotalIntake = currentIntake + changeAmount;
 

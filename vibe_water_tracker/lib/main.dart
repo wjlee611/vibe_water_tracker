@@ -8,6 +8,7 @@ import 'package:vibe_water_tracker/src/data/repositories/auth_repository.dart';
 import 'package:vibe_water_tracker/src/features/auth/cubit/auth_cubit.dart';
 import 'package:vibe_water_tracker/src/data/repositories/intake_repository.dart';
 import 'package:vibe_water_tracker/src/features/home/cubit/intake_cubit.dart';
+import 'package:vibe_water_tracker/src/features/home/cubit/stats_cubit.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -42,6 +43,11 @@ class VibeApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (context) => IntakeCubit(
+              context.read<IntakeRepository>(),
+            ),
+          ),
+          BlocProvider(
+            create: (context) => StatsCubit(
               context.read<IntakeRepository>(),
             ),
           ),

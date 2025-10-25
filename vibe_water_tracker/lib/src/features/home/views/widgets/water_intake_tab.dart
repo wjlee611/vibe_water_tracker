@@ -9,7 +9,7 @@ class WaterIntakeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    return BlocBuilder<IntakeCubit, int>(
+    return BlocBuilder<IntakeCubit, double>(
       builder: (context, intake) {
         return Padding(
           padding: const EdgeInsets.all(16.0),
@@ -24,7 +24,7 @@ class WaterIntakeTab extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                '$intake ml',
+                '${intake.toInt()} ml',
                 style: textTheme.displayLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -36,19 +36,19 @@ class WaterIntakeTab extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      context.read<IntakeCubit>().updateIntake(10);
+                      context.read<IntakeCubit>().updateIntake(10.0);
                     },
                     child: const Text('호록\n+10ml'),
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      context.read<IntakeCubit>().updateIntake(30);
+                      context.read<IntakeCubit>().updateIntake(30.0);
                     },
                     child: const Text('꼴깍\n+30ml'),
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      context.read<IntakeCubit>().updateIntake(50);
+                      context.read<IntakeCubit>().updateIntake(50.0);
                     },
                     child: const Text('꿀꺽\n+50ml'),
                   ),
@@ -57,7 +57,7 @@ class WaterIntakeTab extends StatelessWidget {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  context.read<IntakeCubit>().updateIntake(-30);
+                  context.read<IntakeCubit>().updateIntake(-30.0);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.redAccent,

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:vibe_water_tracker/src/data/repositories/auth_repository.dart';
 import 'package:vibe_water_tracker/src/features/auth/cubit/auth_state.dart';
 
