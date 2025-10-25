@@ -31,15 +31,18 @@
 
 - **루트 디렉토리:** `/Users/wjlee/Desktop/vibe_hack_2025`
 - **Flutter 프로젝트:** `vibe_water_tracker` (하위 디렉토리)
+- **아키텍처:** Feature-based Architecture
 - **주요 디렉토리 및 파일:**
   - `PLAN.md`: 전체 개발 계획
   - `TASKs.md`: 구체적인 작업 목록
   - `PRD.md`: 제품 요구사항 명세서
   - `firebase-debug.log`: Firebase 디버그 로그 (현재 존재)
-  - **레이어 (vibe_water_tracker/lib/src 내부):**
-    - `bloc`: 비즈니스 로직 (상태 관리)
-    - `repository`: 도메인 (데이터 처리 및 종속성 주입)
-  - (추가될 예정)
+  - **`vibe_water_tracker/lib/src` 내부 구조:**
+    - `core`: 공통 위젯, 유틸리티, 상수 등
+    - `features`: 기능별 모듈
+      - `auth`: 사용자 인증 관련 (로그인, 스플래시 등)
+      - `home`: 메인 화면 (물 마시기, 기록 등)
+      - `...` (추가 기능)
 
 ## 4. 코딩 컨벤션
 
