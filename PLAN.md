@@ -1,34 +1,86 @@
-# Vibe Water Tracker 개발 계획 (PLAN)
+# Vibe Water Tracker 개발 계획
 
-이 문서는 프로젝트의 전체적인 개발 단계를 정의합니다. 각 단계의 구체적인 작업은 `TASKs.md`에서 관리합니다.
+이 문서는 `PRD.md`를 기반으로 프로젝트의 기술적인 설계와 구현 계획을 정의합니다.
 
-## Phase 1: 프로젝트 기반 설정 (Foundation)
+## 1. 프로젝트 아키텍처
 
-1.  **프로젝트 초기화 및 의존성 설정:** Flutter 프로젝트를 생성하고, Firebase, BLoC, go_router 등 핵심 라이브러리를 설치합니다.
-2.  **Firebase 연동:** Firebase 프로젝트를 설정하고 Flutter 앱과 연동합니다.
-3.  **아키텍처 및 기본 구조 설계:** Presentation - Domain - Data 레이어에 따른 디렉토리 구조를 설정하고 기본 라우팅을 구성합니다.
-4.  **기본 테마 및 스타일링:** 앱의 전체적인 디자인 시스템(컬러, 폰트 등)을 정의합니다.
+### 1.1. 폴더 구조 (Feature-based)
 
-## Phase 2: 사용자 인증 (Authentication)
+-   **`lib/src`**: 소스 코드의 루트 디렉토리입니다.
+    -   **`features`**: 기능별 모듈을 관리합니다.
+        -   `auth`: 사용자 인증 (스플래시, 로그인) 관련 코드를 포함합니다.
+        -   `home`: 메인 화면 (물 마시기, 기록) 관련 코드를 포함합니다.
+    -   **`core`**: 여러 기능에서 공통으로 사용하는 로직 및 위젯을 관리합니다.
+        -   `router`: `go_router`를 사용한 화면 라우팅 설정을 담당합니다.
+        -   `theme`: 앱의 전체적인 테마(색상, 폰트 등)를 정의합니다.
+        -   `widgets`: 공통적으로 사용되는 커스텀 위젯을 포함합니다.
+    -   **`data`**: 데이터 소스 및 모델을 관리합니다.
+        -   `models`: Firestore와 통신하기 위한 데이터 모델(User, Intake 등)을 정의합니다.
+        -   `repositories`: 데이터의 CRUD(생성, 읽기, 업데이트, 삭제) 로직을 추상화합니다.
 
-1.  **인증 로직 구현:** Google 소셜 로그인을 위한 Repository와 BLoC(Cubit)을 구현합니다.
-2.  **UI 구현:** 스플래시 화면과 로그인 화면 UI를 개발합니다.
-3.  **화면 라우팅:** 사용자의 인증 상태에 따라 스플래시, 로그인, 홈 화면 간의 이동을 `go_router`로 처리합니다.
+### 1.2. 레이어 구성 (Layered Architecture)
 
-## Phase 3: 핵심 기능 - 물 마시기 (Core Feature)
+-   **Presentation Layer**: UI와 상태 관리를 담당합니다. (Flutter Widgets, BLoC/Cubit)
+-   **Domain Layer**: 앱의 핵심 비즈니스 로직을 포함합니다. (이번 프로젝트에서는 Repository가 일부 담당)
+-   **Data Layer**: 데이터 소스(Firebase Auth, Firestore)와의 통신 및 데이터 처리를 담당합니다.
 
-1.  **메인 화면 구조:** 탭 네비게이션(물 마시기, 기록)을 포함한 홈 화면의 기본 구조를 구현합니다.
-2.  **물 마시기 UI 및 로직:** 물 섭취량을 추가/감소시키는 버튼과 오늘 마신 양을 표시하는 UI를 개발하고, 관련 상태 관리를 위한 BLoC(Cubit)을 구현합니다.
-3.  **데이터 연동:** 사용자의 물 섭취 기록을 Firestore에 저장하고 불러오는 로직을 구현합니다.
+## 2. 데이터 모델 설계 (Firestore)
 
-## Phase 4: 핵심 기능 - 기록 확인 (History)
+-   **`users` 컬렉션**:
+    -   `{userId}` (문서):
+        -   `uid` (String): Firebase Authentication에서 제공하는 고유 사용자 ID
+        -   `email` (String): 사용자 이메일
+        -   `displayName` (String): 사용자 이름
+        -   `daily_intakes` (Map): 날짜별 물 섭취량 기록 (`{ "YYYY-MM-DD": amount (Number) }`)
+-   **`global_stats` 컬렉션**:
+    -   `total_intake` (문서):
+        -   `totalAmount` (Number): 모든 사용자의 누적 섭취량 합계
 
-1.  **기록 화면 UI 및 로직:** 주간, 월간, 전체 섭취량을 표시하는 UI를 개발하고, 관련 BLoC(Cubit)을 구현합니다.
-2.  **전체 사용자 통계(TMI) 구현:** 모든 사용자의 누적 섭취량을 Firestore에서 집계하여 보여주는 기능을 구현합니다.
-3.  **로그아웃 기능:** 기록 화면에 로그아웃 기능을 구현합니다.
+## 3. 상태 관리 전략 (BLoC/Cubit)
 
-## Phase 5: 테스트 및 배포 준비
+-   **AuthCubit**: 사용자의 인증 상태(로그인/로그아웃)를 관리하여 앱의 전체적인 흐름을 제어합니다.
+-   **IntakeCubit**: 사용자의 일일 물 섭취량 상태를 관리하고, Firestore와 데이터를 동기화합니다.
+-   **StatsCubit**: 개인(일간, 주간, 월간) 및 전체 사용자의 통계 데이터를 불러와 관리합니다.
 
-1.  **단위/위젯 테스트:** 주요 비즈니스 로직과 위젯에 대한 테스트 코드를 작성합니다.
-2.  **리팩토링 및 최적화:** 코드 품질을 개선하고 성능을 최적화합니다.
-3.  **배포 준비:** 각 플랫폼(iOS, Android)에 맞는 앱 아이콘, 스플래시 이미지 등을 설정하고 배포를 준비합니다.
+## 4. UI 화면 구성
+
+-   **Splash Screen**: 앱 실행 시 사용자의 로그인 상태를 확인하고, 로그인 페이지 또는 홈 페이지로 자동 라우팅합니다.
+-   **Login Screen**: "Google 계정으로 로그인" 버튼을 제공하여 Firebase 인증을 수행합니다.
+-   **Home Screen**:
+    -   **하단 탭 네비게이션 (`BottomNavigationBar`)**을 통해 두 개의 메인 화면을 전환합니다.
+        1.  **물 마시기 (Water Intake Tab)**:
+            -   오늘의 총 섭취량을 표시합니다.
+            -   섭취량을 추가/감소시키는 버튼(+10ml, +30ml, +50ml, -30ml)을 제공합니다.
+        2.  **기록 (Stats Tab)**:
+            -   개인 통계 (오늘, 이번 주, 이번 달 마신 양)를 표시합니다.
+            -   전체 사용자 누적 섭취량 (TMI)을 보여줍니다.
+            -   로그아웃 버튼을 제공합니다.
+
+## 5. 구현 순서 (우선순위별)
+
+1.  **Phase 1: 프로젝트 기반 설정**
+    -   Flutter 프로젝트 생성 및 Firebase 연동 (Android/iOS 설정 포함)
+    -   `go_router`, `flutter_bloc` 등 주요 의존성 추가
+    -   위에서 설계한 폴더 구조 생성 및 기본 라우팅 설정
+
+2.  **Phase 2: 사용자 인증 기능**
+    -   `AuthRepository` 및 `AuthCubit` 구현 (Google 로그인 로직)
+    -   Splash Screen UI 및 라우팅 로직 구현
+    -   Login Screen UI 및 Google 로그인 버튼 연동
+
+3.  **Phase 3: 물 마시기 핵심 기능**
+    -   Home Screen의 기본 구조 (탭 네비게이션) 구현
+    -   Water Intake Tab UI 구현
+    -   `IntakeRepository` 및 `IntakeCubit` 구현 (Firestore 데이터 연동)
+    -   섭취량 추가/감소 기능 구현
+
+4.  **Phase 4: 기록 및 통계 기능**
+    -   Stats Tab UI 구현
+    -   `StatsRepository` 및 `StatsCubit` 구현
+    -   개인 및 전체 통계 데이터 조회 및 화면 표시
+    -   로그아웃 기능 구현
+
+5.  **Phase 5: 고도화 및 마무리**
+    -   전체적인 UI/UX 다듬기
+    -   코드 리팩토링 및 주석 추가
+    -   (선택) 간단한 단위 테스트 또는 위젯 테스트 작성

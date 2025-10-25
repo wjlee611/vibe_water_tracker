@@ -160,3 +160,15 @@
 [info] 
 [info] Firebase console is available at
 [info] https://console.firebase.google.com/project/vibe-water-tracker-2025/overview
+[debug] [2025-10-25T10:21:56.578Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:21:56.581Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:21:56.596Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:21:56.597Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:21:56.850Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:21:56.851Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:21:56.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:21:56.851Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:21:56.936Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:21:56.936Z] > authorizing via signed-in user (wjlee611@gmail.com)
+[debug] [2025-10-25T10:21:56.937Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-25T10:21:56.937Z] > authorizing via signed-in user (wjlee611@gmail.com)
