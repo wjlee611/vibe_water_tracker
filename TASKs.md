@@ -26,12 +26,12 @@
 
 ### Phase 3: 물 마시기 핵심 기능
 
-- [ ] `features/home/views/home_screen.dart` 기본 구조 구현 (하단 탭 네비게이션)
-- [ ] `features/home/views/water_intake_tab.dart` UI 구현
-- [ ] `data/models/user_model.dart`, `intake_model.dart` 데이터 모델 정의
-- [ ] `data/repositories/intake_repository.dart` 구현 (Firestore 데이터 CRUD)
-- [ ] `features/home/cubit/intake_cubit.dart` 구현 (섭취량 상태 관리)
-- [ ] 섭취량 추가/감소 기능 구현 및 Firestore 연동
+- [x] `features/home/views/home_screen.dart` 기본 구조 구현 (하단 탭 네비게이션)
+- [x] `features/home/views/water_intake_tab.dart` UI 구현
+- [x] `data/models/user_model.dart`, `intake_model.dart` 데이터 모델 정의
+- [x] `data/repositories/intake_repository.dart` 구현 (Firestore 데이터 CRUD)
+- [x] `features/home/cubit/intake_cubit.dart` 구현 (섭취량 상태 관리)
+- [x] 섭취량 추가/감소 기능 구현 및 Firestore 연동
 
 ### Phase 4: 기록 및 통계 기능
 
